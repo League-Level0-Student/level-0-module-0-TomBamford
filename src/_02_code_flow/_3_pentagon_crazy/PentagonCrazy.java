@@ -26,15 +26,17 @@ public class PentagonCrazy {
 		//  			Hint: Divide 360 by the number of sides the shape has.
 		int angle=360/5;
 		//  LOOP. Use a for loop to repeat ALL the following lines of code 200 times. 
-		
+		for (int i = 0; i < 200; i++) {
 				//  DRAW.  Make the robot move "i" pixels
 				//         "i" is the variable in the for loop
-		
+		rob.move(i);
 				//  TURN.  Turn the robot the amount in your angle variable + 1
-
-
-		// Hide the robot so you can see the pattern.
+			rob.turn(angle + 1);
 		
+			
+		}
+		// Hide the robot so you can see the pattern.
+		rob.hide();
 		// Check the pattern against the picture in the recipe. If it matches, you are done!
 	}
 
@@ -47,5 +49,6 @@ public class PentagonCrazy {
 	
 	public static void main(String[] args) {
 		new PentagonCrazy().drawPattern();
+		
 	}
 }
