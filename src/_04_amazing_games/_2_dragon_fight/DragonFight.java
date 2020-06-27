@@ -14,16 +14,17 @@ public class DragonFight {
 		JOptionPane.showMessageDialog(null, "Defeat the dragon to take its treasure!", "Dragon Fighter", 0, dragon);
 
 		// 1. Create some variables to hold health levels
-		
+			int playerHealth = 100;
+			int dragonHealth = 100;
 			// playerHealth to store your health - set it equal to 100
 	
 			// dragonHealth to store the dragon's health - set it equal to 100
 
 		// 2. Create some variables to hold the attack strengths. These will be given different values later. 
-		
+			int playerAttack = 0;
 			// playerAttack to store the damage the player's attack will do - set it equal
 			// to 0 for now.
-	
+			int dragonAttack = 0;
 			// dragonAttack to store the damage the dragon's attack will do - set it equal
 			// to 0 for now.
 
@@ -32,17 +33,24 @@ public class DragonFight {
 		while (true) {
 
 			// THE PLAYER ATTACKS THE DRAGON
-
+			String input = JOptionPane.showInputDialog("Do you want to attack the dragon with a yell or a kick?");
 				// 3. Ask the player in a pop-up if they want to attack the dragon with a yell
 				// or a kick
 	
+			if(input.equalsIgnoreCase("yell")) {
+				playerAttack = ran.nextInt(10);
+				dragonHealth -= playerAttack;
+			}
 				// 4. If they typed in "yell":
 	
 					// -- Find a random number between 0 and 10 and store it in playerAttack. Use
 					// ran.nextInt(10)
 		
 					// -- Subtract the player attack value from the dragon's health
-	
+			if(input.equalsIgnoreCase("kick")) {
+				playerAttack = ran.nextInt(25);
+				dragonHealth -= playerAttack;
+			}
 				// 5. If they typed in "kick":
 	
 					// -- Find a random number between 0 and 25 and store it in playerAttack.
@@ -50,13 +58,14 @@ public class DragonFight {
 					// -- Subtract the player attack value from the dragon's health
 
 			// THE DRAGON RETALIATES
-
+			dragonAttack = ran.nextInt(35);
+			playerHealth -= dragonAttack;
 				// 6. Find a random number between 0 and 35 and store it in dragonAttack
 	
 				// 7. Subtract the dragon attack value from the player's health
 
 			// ASSESS THE DAMAGE CAUSED 
-
+			
 				// 8. If the player's health is less than or equal to 0
 				// call the playerLost() method
 	

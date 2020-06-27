@@ -19,7 +19,7 @@ public class QuizGame {
 				}
 				else {
 					JOptionPane.showMessageDialog(null, "Incorrect!");
-					score -+ 1;
+					score += 0;
 				}
 				String question2 = JOptionPane.showInputDialog("What is the color of the sky?");
 				// 3.  Use an if statement to check if their answer is correct
@@ -29,7 +29,7 @@ public class QuizGame {
 				}
 				else {
 					JOptionPane.showMessageDialog(null, "Incorrect!");
-					score -+ 1;
+					score += 0;
 				}
 				String question3 = JOptionPane.showInputDialog("What is the common color of a leaf?");
 				// 3.  Use an if statement to check if their answer is correct
@@ -39,15 +39,14 @@ public class QuizGame {
 				}
 				else {
 					JOptionPane.showMessageDialog(null, "Incorrect!");
-					score -+ 1;
+					score += 0;
 				}
+				JOptionPane.showMessageDialog(null, score);
 		}
 				// 4.  if the user's answer was correct, add one to their score 
 		
 		// MAKE MORE QUESTIONS. Ask more questions by repeating the above 
 				// Option: Subtract a point from their score for a wrong answer
-		
-		JOptionPane.showInputDialog("score");
 		// After all the questions have been asked, tell the user their final score 
 		
 	}
